@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>771</width>
+    <height>746</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="camera">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>50</y>
+      <width>431</width>
+      <height>301</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>摄像显示</string>
+    </property>
+    <widget class="QLabel" name="display">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>34</y>
+       <width>400</width>
+       <height>250</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>TextLabel</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>380</y>
+      <width>681</width>
+      <height>311</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout" stretch="3,1">
+     <property name="spacing">
+      <number>20</number>
+     </property>
+     <property name="leftMargin">
+      <number>10</number>
+     </property>
+     <property name="topMargin">
+      <number>10</number>
+     </property>
+     <property name="rightMargin">
+      <number>10</number>
+     </property>
+     <property name="bottomMargin">
+      <number>10</number>
+     </property>
+     <item>
+      <widget class="QGroupBox" name="car_control">
+       <property name="title">
+        <string>行进控制</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="1">
+         <widget class="QPushButton" name="forward_button">
+          <property name="text">
+           <string>前进</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QPushButton" name="stop_button">
+          <property name="text">
+           <string>停止</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QPushButton" name="right_button">
+          <property name="text">
+           <string>右转</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QPushButton" name="left_button">
+          <property name="text">
+           <string>左转</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QSpinBox" name="speed_sb">
+          <property name="prefix">
+           <string>速度：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QPushButton" name="back_button">
+          <property name="text">
+           <string>后退</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="2">
+         <widget class="QPushButton" name="dc_button">
+          <property name="text">
+           <string>减速</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QPushButton" name="ac_button">
+          <property name="text">
+           <string>加速</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QPushButton" name="sound_button">
+          <property name="text">
+           <string>鸣笛</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="data">
+       <property name="title">
+        <string>数据显示</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QDoubleSpinBox" name="temperature">
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+          <property name="prefix">
+           <string>温度：</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDoubleSpinBox" name="humidity">
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+          <property name="prefix">
+           <string>湿度：</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDoubleSpinBox" name="o_distance">
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+          <property name="prefix">
+           <string>前方障碍物距离：</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QGroupBox" name="mode">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>40</y>
+      <width>180</width>
+      <height>300</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>114</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="baseSize">
+     <size>
+      <width>28</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="title">
+     <string>功能模式开关</string>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <property name="leftMargin">
+      <number>25</number>
+     </property>
+     <item>
+      <widget class="QCheckBox" name="avoid_checkBox">
+       <property name="text">
+        <string>自动避障</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="auto_rbutton">
+       <property name="text">
+        <string>自动循迹</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="hand_rbutton">
+       <property name="text">
+        <string>手动驾驶</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>771</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <tabstops>
+  <tabstop>forward_button</tabstop>
+  <tabstop>left_button</tabstop>
+  <tabstop>stop_button</tabstop>
+  <tabstop>right_button</tabstop>
+  <tabstop>back_button</tabstop>
+  <tabstop>speed_sb</tabstop>
+  <tabstop>avoid_checkBox</tabstop>
+  <tabstop>auto_rbutton</tabstop>
+  <tabstop>hand_rbutton</tabstop>
+  <tabstop>temperature</tabstop>
+  <tabstop>humidity</tabstop>
+  <tabstop>o_distance</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
